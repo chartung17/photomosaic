@@ -1,0 +1,11 @@
+.settings
+bin
+.classpath
+.project
+nbproject
+PhotomosaicCache
+build
+build.xml
+*.log
+manifest.mf
+temp.jpg
