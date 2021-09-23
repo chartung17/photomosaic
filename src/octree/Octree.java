@@ -88,7 +88,7 @@ public class Octree<T> extends AbstractMap<Point3D, T> {
 
 	/**
 	 * Constructs an Octree with the same mappings as the specified map where x, y, and z can be any
-	 * double values.
+	 * double values between Long.MIN_VALUE and Long.MAX_VALUE.
 	 * 
 	 * @param map the map whose mappings are to be placed in this map
 	 */
@@ -129,12 +129,13 @@ public class Octree<T> extends AbstractMap<Point3D, T> {
 	}
 
 	/**
-	 * Constructs an empty Octree where x, y, and z can be any double values.
+	 * Constructs an empty Octree where x, y, and z can be any double values between Long.MIN_VALUE
+	 * and Long.MAX_VALUE.
 	 * 
 	 * @param distFunction the function used to calculate distances for nearest neighbor searches
 	 */
 	public Octree(DistFunction distFunction) {
-		this(-Double.MAX_VALUE, Double.MAX_VALUE, distFunction);
+		this(Long.MIN_VALUE, Long.MAX_VALUE, distFunction);
 	}
 
 	/**
@@ -176,13 +177,13 @@ public class Octree<T> extends AbstractMap<Point3D, T> {
 
 	/**
 	 * Constructs an Octree with the same mappings as the specified map where x, y, and z can be any
-	 * double values.
+	 * double values between Long.MIN_VALUE and Long.MAX_VALUE.
 	 * 
 	 * @param map          the map whose mappings are to be placed in this map
 	 * @param distFunction the function used to calculate distances for nearest neighbor searches
 	 */
 	public Octree(Map<? extends Point3D, ? extends T> map, DistFunction distFunction) {
-		this(-Double.MAX_VALUE, Double.MAX_VALUE, map, distFunction);
+		this(Long.MIN_VALUE, Long.MAX_VALUE, map, distFunction);
 	}
 
 	/**
